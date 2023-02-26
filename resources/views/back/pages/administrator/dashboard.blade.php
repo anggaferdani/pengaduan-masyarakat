@@ -1,1 +1,62 @@
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet reprehenderit beatae perferendis omnis at, quia ducimus, asperiores, odio ipsa ex quidem dolorum ratione harum magnam laborum ipsam quae itaque! Suscipit sit, ab, culpa dignissimos eum veniam sapiente neque fuga odit similique ipsam. Quis, adipisci deserunt ratione nulla possimus quam inventore necessitatibus ullam aperiam saepe quas eum ab dicta veritatis harum suscipit ad expedita! Eveniet doloribus architecto, porro reprehenderit deleniti et deserunt dignissimos nemo quidem? Eius sapiente nihil beatae! Corporis quaerat nam fugit nulla dicta amet a quisquam repellat ab ratione beatae dolore cupiditate, eum cum dolor illum dignissimos veritatis et modi vitae voluptatem repellendus ipsa. Nam veniam odit illum? Libero, omnis at vitae soluta vero aperiam! Distinctio qui, ullam, explicabo ipsa officia, minus blanditiis debitis unde rerum quasi dolorem architecto? Officiis, corrupti corporis. Aperiam obcaecati repudiandae soluta. Minima fugit debitis labore accusantium eaque exercitationem voluptates molestias commodi non totam, dicta laboriosam quam officia ea facilis natus, illo deleniti porro libero eveniet culpa? Nemo vel doloribus sapiente aliquid. Consectetur adipisci incidunt animi, iure, consequatur illo quas sit autem sapiente vel id inventore saepe voluptate et commodi. In aliquam ipsa, accusamus dicta dolorem, porro similique quibusdam sit corrupti, ex natus sunt cum recusandae ea culpa voluptate beatae magni blanditiis impedit. Placeat eaque et debitis magni? Sapiente similique impedit, placeat facere eum perferendis laboriosam in quidem debitis quo assumenda sint consequatur, laudantium officiis nobis harum tempora autem voluptatibus pariatur praesentium quos laborum! Suscipit harum, voluptas eaque facilis amet ducimus provident magnam consequatur quas dolorem expedita at quod in exercitationem asperiores, reprehenderit tenetur rerum recusandae quaerat vero laudantium. Iusto dolorem, magnam a fuga officia dolore dignissimos libero illum vel, corporis provident! Consequuntur officia, ex facilis ut veritatis aperiam mollitia possimus perferendis non tempora beatae rerum reiciendis vitae, enim similique? Facilis a, ullam excepturi molestias, recusandae libero magnam numquam rerum voluptates, ab error. Iure corrupti nobis recusandae porro ipsam accusamus. Tempore tenetur quidem facilis repellendus harum minus! Hic, alias quos officiis facere rem ab at voluptates! Excepturi odit magni dolores architecto ratione perspiciatis inventore quod aperiam quisquam voluptas consectetur, rem itaque aspernatur rerum sint ipsa ex vel repellat, unde dolorem eligendi alias distinctio! Recusandae quae repellendus ducimus! Aliquam pariatur, sed officiis esse at tenetur qui voluptates ipsam non in voluptas doloribus accusamus rerum perferendis earum harum excepturi? Magni dolore repellendus vitae laborum saepe libero reiciendis atque ducimus nesciunt cumque ad ratione, ipsam quidem dolorum tempore quam tempora earum cupiditate ex. Inventore numquam impedit qui tenetur cupiditate, accusantium eos error sit recusandae. Earum impedit vel recusandae ratione alias, ipsam numquam accusamus quis beatae dolores aliquam perspiciatis, quidem veniam consectetur facere iste quod ipsum labore praesentium atque, a non! Dolorum adipisci facilis debitis ipsa asperiores cupiditate tenetur non, in ad ut soluta harum facere eligendi consequuntur alias maiores repudiandae est deleniti. Nulla similique velit dolorum eum debitis provident minus quasi ducimus est et labore consectetur consequuntur dicta aliquam obcaecati, minima facere molestiae sint itaque explicabo ipsum officiis veritatis, nobis corporis. Saepe voluptatem culpa rem quisquam! Eveniet nulla libero possimus debitis qui ab laudantium harum voluptates obcaecati repellat modi laborum, mollitia corporis excepturi dolor laboriosam est fuga! Assumenda laudantium asperiores in fugit delectus! Praesentium, provident culpa dignissimos dolorum corrupti soluta voluptate ipsum numquam, possimus, eius voluptatum quam consectetur labore? Nobis enim libero unde deleniti. Aliquam, veritatis natus delectus quasi quisquam ipsa porro sint magnam ex, veniam inventore itaque accusamus sit nam maiores vitae iste mollitia velit perferendis atque. Quae facilis adipisci nobis aperiam doloribus, impedit dolorem perspiciatis ipsum rem nihil praesentium beatae porro minus quisquam quis? Nobis enim ex nihil nam cupiditate soluta, asperiores nisi labore quam laborum in, exercitationem fuga saepe quasi, dicta ratione id! Quam quos voluptatibus blanditiis accusamus ipsa quae rem quisquam mollitia, nostrum doloribus, officia nobis esse ipsum eligendi alias quis fuga! Itaque earum temporibus recusandae similique quidem aspernatur nihil quas doloremque, quam nulla ad ullam voluptate numquam? Voluptatibus necessitatibus distinctio quos tenetur quia! Accusamus culpa dolorem nesciunt, similique quae excepturi ullam dolores rem nisi, omnis, veniam sequi. Optio sequi deserunt asperiores animi esse? Et nobis architecto eaque illo optio odit, quos nostrum eos, accusamus, id dolor quasi tenetur impedit. Neque nam dicta repudiandae? Iusto non dolor ab totam id blanditiis itaque illo adipisci aliquam pariatur quod asperiores dignissimos illum excepturi odio voluptate corporis, assumenda commodi cupiditate magni vitae dolore laudantium. Aut cum doloremque necessitatibus placeat harum beatae. In assumenda facere totam a quidem? Nihil qui, odio nesciunt quod eaque voluptatum sunt expedita! Nemo ab quibusdam maiores, dolor minima nam cumque blanditiis cum ea eos quaerat modi vero magnam, temporibus quia. Earum vero perspiciatis tempora odio nobis harum? Omnis assumenda blanditiis tenetur, harum repellat eaque facilis autem deserunt itaque, cupiditate dolore laboriosam voluptas doloremque, quibusdam repudiandae esse. Pariatur, hic molestias alias eius delectus vel enim maxime repellendus accusamus voluptatem dolores, tempore ullam. Molestias sequi nesciunt consectetur illum tempora voluptate enim, nisi dolores tenetur officia assumenda quia magni! Sed aspernatur excepturi neque quod ducimus? Doloremque libero necessitatibus soluta laborum quae eum corrupti, repudiandae veniam, incidunt omnis ducimus quisquam, repellat eaque expedita est unde. Atque repellendus ipsum beatae perferendis eius dignissimos, dolor ab numquam sapiente cumque obcaecati quam labore. Tenetur natus quos necessitatibus ipsa aspernatur, repudiandae dolor ratione cupiditate aliquam est unde placeat consequatur. Odio quia hic sunt exercitationem, nobis maiores quod ad officiis optio officia sint velit veniam beatae libero temporibus ratione? Odit vero cum fuga! Architecto nemo saepe, laboriosam adipisci pariatur, itaque ex mollitia beatae ad aliquam voluptatem impedit qui eius reprehenderit provident nulla exercitationem quasi suscipit. Amet assumenda saepe ipsam modi voluptatem quam voluptates repellendus, nostrum, deserunt illum eligendi. Minima rerum pariatur, nihil fugit a animi mollitia culpa aliquam quae, iusto, enim quis tempore dolor! Obcaecati, quidem reiciendis. Itaque veniam pariatur consequatur facere minus molestiae ex voluptas enim in. Enim at iure consectetur cum aspernatur animi nesciunt aliquid, repellat laborum, molestias delectus rem corrupti officia magni nostrum! Autem ad, eius, eum cumque placeat modi minima at delectus, nemo ipsam aliquam consequatur tempore adipisci accusantium? Molestiae eligendi eveniet saepe nam in maxime, error nemo.
+@extends('back.templates.pages')
+@section('title')
+@section('content')
+<div class="row row-cards">
+  <div class="col-md-6 col-lg-3">
+    <div class="card bg-primary text-primary-fg">
+      <div class="card-stamp">
+        <div class="card-stamp-icon bg-white text-primary">
+          <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Card with background and icon</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum recusandae reiciendis saepe.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-3">
+    <div class="card bg-primary text-primary-fg">
+      <div class="card-stamp">
+        <div class="card-stamp-icon bg-white text-primary">
+          <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Card with background and icon</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum recusandae reiciendis saepe.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-3">
+    <div class="card bg-primary text-primary-fg">
+      <div class="card-stamp">
+        <div class="card-stamp-icon bg-white text-primary">
+          <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Card with background and icon</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum recusandae reiciendis saepe.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-3">
+    <div class="card bg-primary text-primary-fg">
+      <div class="card-stamp">
+        <div class="card-stamp-icon bg-white text-primary">
+          <!-- Download SVG icon from http://tabler-icons.io/i/star -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"></path></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">Card with background and icon</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto at consectetur culpa ducimus eum fuga fugiat, ipsa iusto, modi nostrum recusandae reiciendis saepe.</p>
+      </div>
+    </div>
+  </div>
+</div>
+@endsection
