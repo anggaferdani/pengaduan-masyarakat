@@ -10,8 +10,19 @@ class Authenticate extends Middleware
     /**
      * Get the path the user should be redirected to when they are not authenticated.
      */
-    protected function redirectTo(Request $request): ?string
+    protected function redirectTo(Request $request)
     {
-        return $request->expectsJson() ? null : route('login');
+        if(!$request->expectsJson()){
+            if($request->routeIs('administrator.*')){
+                session()->flash('fail', 'mdasd. dsadasdasdasdasd');
+                return route('login');
+            }elseif($request->routeIs('petugas.*')){
+                session()->flash('fail', 'mdasd. dsadasdasdasdasd');
+                return route('login');
+            }elseif($request->routeIs('user.*')){
+                session()->flash('fail', 'mdasd. dsadasdasdasdasd');
+                return route('login');
+            }
+        }
     }
 }

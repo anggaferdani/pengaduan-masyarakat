@@ -9,14 +9,30 @@
     <div class="card card-md">
       <div class="card-body">
         <h2 class="h2 text-center mb-4">Login to your account</h2>
-        <form action="./" method="get" autocomplete="off" novalidate>
+
+        @if(Session::get('success'))
+        <div class="alert alert-success" role="alert">
+          <div class="text-muted">{{ Session::get('success') }}</div>
+        </div>
+        @endif
+
+        @if(Session::get('fail'))
+        <div class="alert alert-danger" role="alert">
+          <div class="text-muted">{{ Session::get('fail') }}</div>
+        </div>
+        @endif
+
+        <form action="{{ route('postlogin') }}" method="POST" novalidate>
+          @csrf
           <div class="mb-3">
             <label class="form-label">Email address</label>
-            <input type="email" class="form-control" placeholder="your@email.com" autocomplete="off">
+            <input type="email" name="email" required class="form-control" placeholder="your@email.com" autocomplete="off">
+            <p class="text-danger">@error('email'){{ $message }}@enderror</p>
           </div>
           <div class="mb-2">
             <label class="form-label">Password</label>
-            <input type="password" class="form-control" placeholder="Your password" autocomplete="off">
+            <input type="password" name="password" required class="form-control" placeholder="Your password" autocomplete="off">
+            <p class="text-danger">@error('password'){{ $message }}@enderror</p>
           </div>
           <div class="mb-2">
             <label class="form-check">
