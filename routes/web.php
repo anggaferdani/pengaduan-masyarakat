@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\PengaduanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,10 @@ Route::prefix('petugas')->name('petugas.')->group(function(){
 
 Route::prefix('user')->name('user.')->group(function(){
     Route::middleware(['auth:web'])->group(function(){
-        Route::get('/dashboard', function(){return view('back.pages.masyarakat.dashboard');})->name('dashboard');
+        Route::get('/hanya-pengaduan-mu', [PengaduanController::class, 'hanya_pengaduan_mu'])->name('hanya-pengaduan-mu');
+        Route::get('/semua', [PengaduanController::class, 'semua'])->name('semua');
+        Route::get('/pengaduan/{id}', [PengaduanController::class, 'pengaduan'])->name('pengaduan');
+        Route::get('/create', [PengaduanController::class, 'create'])->name('create');
+        Route::post('/store', [PengaduanController::class, 'store'])->name('store');
     });
 });
