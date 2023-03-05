@@ -39,7 +39,7 @@ class Controller extends BaseController
                 }elseif(auth()->user()->level == 2){
                     return redirect()->route('petugas.dashboard');
                 }elseif(auth()->user()->level == 3){
-                    return redirect()->route('user.hanya-pengaduan-mu');
+                    return redirect()->route('user.create');
                 }
             }elseif(auth()->user()->status_aktif == 2){
                 Auth::guard('web')->logout();

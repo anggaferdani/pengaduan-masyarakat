@@ -22,6 +22,7 @@ class Pengaduan extends Model
         'keterangan',
         'tanggal_pengaduan',
         'lampiran',
+        'alamat_email_pelapor',
         'status_publikasi',
         'status_laporan_pengaduan',
         'status_aktif',

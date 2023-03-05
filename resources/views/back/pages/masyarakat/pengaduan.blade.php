@@ -1,5 +1,21 @@
 @extends('back.templates.pages')
 @section('header')
+<div class="row g-2 align-items-center">
+  <div class="col">
+    <h2 class="page-title">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-news" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"></path><path d="M8 8l4 0"></path><path d="M8 12l4 0"></path><path d="M8 16l4 0"></path></svg>
+      Pengaduan
+    </h2>
+  </div>
+  <!-- Page title actions -->
+  <div class="col-auto ms-auto d-print-none">
+    <a href="#" onclick="history.go(-1)" class="btn btn-primary">
+      <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M5 12l6 6"></path><path d="M5 12l6 -6"></path></svg>
+      Kembali
+    </a>
+  </div>
+</div>
 @endsection
 @section('content')
 <div class="row row-cards">
@@ -23,12 +39,12 @@
           <input type="date" name="tanggal_pengaduan" value="{{ $pengaduan->tanggal_pengaduan }}" class="form-control" placeholder="">
         </div>
         <div class="mb-3">
-          <label class="form-label required">Lampiran</label>
-          <input type="file" name="lampiran" class="form-control" placeholder="">
+          <label class="form-label">Lampiran</label>
+          <img src="/lampiran/{{ $pengaduan->lampiran }}" class="card-img-top">
         </div>
       </div>
       <div class="card-footer card-footer-transparent">
-        This is transparent card footer
+        dibuat oleh {{ $pengaduan->alamat_email_pelapor }}
       </div>
     </div>
   </div>

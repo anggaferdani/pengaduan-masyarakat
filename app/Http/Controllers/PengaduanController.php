@@ -32,7 +32,7 @@ class PengaduanController extends Controller
             'judul' => 'required',
             'keterangan' => 'required',
             'tanggal_pengaduan' => 'required',
-            'lampiran' => 'required',
+            'lampiran' => 'nullable',
             'status_publikasi' => 'required',
         ]);
 
@@ -42,6 +42,7 @@ class PengaduanController extends Controller
             'keterangan' => $request['keterangan'],
             'tanggal_pengaduan' => $request['tanggal_pengaduan'],
             'status_publikasi' => $request['status_publikasi'],
+            'alamat_email_pelapor' => auth()->user()->email,
         );
 
         if($lampiran = $request->file('lampiran')){
