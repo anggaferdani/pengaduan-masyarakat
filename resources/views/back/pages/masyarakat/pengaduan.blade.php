@@ -20,7 +20,16 @@
 @section('content')
 <div class="row row-cards">
   <div class="col-lg-8">
-    <div class="card">
+
+    @if(Session::get('success'))
+    <div class="alert alert-important alert-primary" role="alert">
+      {{ Session::get('success') }}
+    </div>
+    @endif
+
+    <form class="card" action="{{ route('user.simpan-perubahan', $pengaduan->id) }}" method="POST" enctype="multipart/form-data">
+      @csrf
+      @method('PUT')
       <div class="card-header">
         <h3 class="card-title">Pengaduan</h3>
       </div>
@@ -42,11 +51,12 @@
           <label class="form-label">Lampiran</label>
           <img src="/lampiran/{{ $pengaduan->lampiran }}" class="card-img-top">
         </div>
+        <p>dibuat oleh {{ $pengaduan->alamat_email_pelapor }}</p>
       </div>
-      <div class="card-footer card-footer-transparent">
-        dibuat oleh {{ $pengaduan->alamat_email_pelapor }}
+      <div class="card-footer text-end">
+        <button type="submit" class="btn btn-primary">Edit</button>
       </div>
-    </div>
+    </form>
   </div>
   <div class="col-lg-4">
     <div class="card">

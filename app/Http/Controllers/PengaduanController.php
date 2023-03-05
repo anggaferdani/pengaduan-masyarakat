@@ -56,4 +56,23 @@ class PengaduanController extends Controller
 
         return redirect()->route('user.create')->with('success', 'amsdna dmasndad smdasndasda');
     }
+
+    public function simpan_perubahan(Request $request, $id){
+        $request->validate([
+            'judul' => 'required',
+            'keterangan' => 'required',
+            'tanggal_pengaduan' => 'required',
+            'lampiran' => 'nullable',
+        ]);
+
+        $pengaduan = Pengaduan::find($id);
+
+        $pengaduan->update([
+            'judul' => $request->judul,
+            'keterangan' => $request->keterangan,
+            'tanggal_pengaduan' => $request->tanggal_pengaduan,
+        ]);
+
+        return redirect()->route('user.pengaduan', $id)->with('success', 'amsdna dmasndad smdasndasda');
+    }
 }

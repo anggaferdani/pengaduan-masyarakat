@@ -42,5 +42,6 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::get('/pengaduan/{id}', [PengaduanController::class, 'pengaduan'])->name('pengaduan');
         Route::get('/create', [PengaduanController::class, 'create'])->name('create');
         Route::post('/store', [PengaduanController::class, 'store'])->name('store');
+        Route::put('/simpan-perubahan/{id}', [PengaduanController::class, 'simpan_perubahan'])->name('simpan-perubahan');
     });
 });
