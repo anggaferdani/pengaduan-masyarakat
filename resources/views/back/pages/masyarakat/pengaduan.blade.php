@@ -64,21 +64,25 @@
         <h3 class="card-title">Tanggapan</h3>
         <ul class="steps steps-vertical">
           <li class="step-item">
-            <div class="h4 m-0">Order received</div>
-            <div class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus culpa cum expedita ipsam laborum nam ratione reprehenderit sed sint tenetur!</div>
+            <div class="h4 m-0">Pending</div>
+            <div class="text-muted">Laporan pengaduanmu berhasil ditambahkan. tunggu untuk petugas memberi tanggapan</div>
+          </li>
+          @if($pengaduan->status_laporan_pengaduan == 2)
+          <li class="step-item">
+            <div class="h4 m-0">Sedang Melakukan Peninjauan</div>
+            <div class="text-muted">sdsadsadsadsadasdasdsa</div>
+          </li>
+          @endif
+          @if($pengaduan->status_laporan_pengaduan == 3)
+          <li class="step-item">
+            <div class="h4 m-0">Sedang Melakukan Peninjauan</div>
+            <div class="text-muted">sdsadsadsadsadasdasdsa</div>
           </li>
           <li class="step-item">
-            <div class="h4 m-0">Order received</div>
-            <div class="text-muted">Lorem ipsum dolor sit amet.</div>
+            <div class="h4 m-0">Selesai</div>
+            <div class="text-muted">Laporan pengaduanmu berhasil diselesaikan</div>
           </li>
-          <li class="step-item active">
-            <div class="h4 m-0">Out for delivery</div>
-            <div class="text-muted">Lorem ipsum dolor sit amet.</div>
-          </li>
-          <li class="step-item">
-            <div class="h4 m-0">Finalized</div>
-            <div class="text-muted">Lorem ipsum dolor sit amet.</div>
-          </li>
+          @endif
         </ul>
       </div>
     </div>

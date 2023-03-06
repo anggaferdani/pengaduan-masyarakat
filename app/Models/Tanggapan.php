@@ -3,29 +3,24 @@
 namespace App\Models;
 
 use App\Models\User;
-use App\Models\Tanggapan;
+use App\Models\Pengaduan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Pengaduan extends Model
+class Tanggapan extends Model
 {
     use HasFactory;
 
-    protected $table = 'pengaduans';
+    protected $table = 'tanggapans';
 
     protected $primaryKey = 'id';
 
     protected $fillable = [
         'id',
-        'user_id',
-        'judul',
-        'keterangan',
-        'tanggal_pengaduan',
-        'lampiran',
-        'alamat_email_pelapor',
-        'status_publikasi',
-        'status_laporan_pengaduan',
+        'pengaduan_id',
+        'alamat_email_petugas',
+        'tanggapan',
         'status_aktif',
         'created_by',
         'updated_by',
@@ -42,11 +37,11 @@ class Pengaduan extends Model
         });
     }
 
-    public function users(){
-        return $this->belongsTo(User::class, 'user_id');
+    public function pengaduans(){
+        return $this->belongsTo(Pengaduan::class, 'pengaduan_id');
     }
 
-    public function tanggapans(){
-        return $this->hasMany(Tanggapan::class);
+    public function users(){
+        return $this->belongsTo(User::class, 'alamat_email_petugas');
     }
 }

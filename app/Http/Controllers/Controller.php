@@ -35,7 +35,7 @@ class Controller extends BaseController
         if(Auth::guard('web')->attempt($creds)){
             if(auth()->user()->status_aktif == 1){
                 if(auth()->user()->level == 1){
-                    return redirect()->route('administrator.dashboard');
+                    return redirect()->route('administrator.semua');
                 }elseif(auth()->user()->level == 2){
                     return redirect()->route('petugas.dashboard');
                 }elseif(auth()->user()->level == 3){
