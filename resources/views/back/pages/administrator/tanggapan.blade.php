@@ -3,7 +3,6 @@
 <div class="row g-2 align-items-center">
   <div class="col">
     <h2 class="page-title">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-news" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"></path><path d="M8 8l4 0"></path><path d="M8 12l4 0"></path><path d="M8 16l4 0"></path></svg>
       Pengaduan
     </h2>
   </div>
@@ -46,9 +45,6 @@
         </div>
         <p>dibuat oleh {{ $pengaduan->alamat_email_pelapor }}</p>
       </div>
-      <div class="card-footer text-end">
-        <button type="submit" class="btn btn-primary">Edit</button>
-      </div>
     </form>
   </div>
   <div class="col-lg-4">
@@ -69,22 +65,12 @@
                 <div class="h4 m-0">Pending</div>
                 <div class="text-muted">Laporan pengaduanmu berhasil ditambahkan. tunggu untuk petugas memberi tanggapan</div>
               </li>
-              @if($pengaduan->status_laporan_pengaduan == 2)
+              @foreach($pengaduan->tanggapans as $tanggapans)
               <li class="step-item">
-                <div class="h4 m-0">Sedang Melakukan Peninjauan</div>
-                <div class="text-muted">sdsadsadsadsadasdasdsa</div>
+                <div class="h4 m-0">{{ $tanggapans->status_laporan_pengaduan }}</div>
+                <div class="text-muted">{{ $tanggapans->tanggapan }}</div>
               </li>
-              @endif
-              @if($pengaduan->status_laporan_pengaduan == 3)
-              <li class="step-item">
-                <div class="h4 m-0">Sedang Melakukan Peninjauan</div>
-                <div class="text-muted">sdsadsadsadsadasdasdsa</div>
-              </li>
-              <li class="step-item">
-                <div class="h4 m-0">Selesai</div>
-                <div class="text-muted">Laporan pengaduanmu berhasil diselesaikan</div>
-              </li>
-              @endif
+              @endforeach
             </ul>
           </div>
         </div>
@@ -99,15 +85,19 @@
           <div class="card-body">
             <div class="mb-3">
               <label class="form-label">Status Laporan Pengaduan</label>
-              <select name="status_laporan_pengaduan" class="form-select">
-                <option value="1" @if ($pengaduan->status_laporan_pengaduan == 1) {{ 'selected' }} @endif>Pending</option>
-                <option value="2" @if ($pengaduan->status_laporan_pengaduan == 2) {{ 'selected' }} @endif>Sedang Melakukan Peninjauan</option>
-                <option value="3" @if ($pengaduan->status_laporan_pengaduan == 3) {{ 'selected' }} @endif>Selesai</option>
-              </select>
+              @if($pengaduan->status_laporan_pengaduan == 'Pending')
+              <input readonly type="text" name="status_laporan_pengaduan" value="Diproses" class="form-control" placeholder="">
+              @endif
+              @if($pengaduan->status_laporan_pengaduan == 'Diproses')
+              <input readonly type="text" name="status_laporan_pengaduan" value="Selesai" class="form-control" placeholder="">
+              @endif
+              @if($pengaduan->status_laporan_pengaduan == 'Selesai')
+              <input readonly type="text" name="status_laporan_pengaduan" value="Selesai" class="form-control" placeholder="">
+              @endif
             </div>
             <div class="mb-3">
               <label class="form-label required">Tanggapan</label>
-              <textarea name="tanggapan" required class="form-control" rows="4" placeholder=""></textarea>
+              <textarea required name="tanggapan" @if($pengaduan->status_laporan_pengaduan == 'Selesai'){{ 'readonly' }}@endif class="form-control" rows="4" placeholder=""></textarea>
             </div>
           </div>
           <div class="card-footer text-end">

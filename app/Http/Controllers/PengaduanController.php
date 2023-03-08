@@ -75,4 +75,14 @@ class PengaduanController extends Controller
 
         return redirect()->route('user.pengaduan', $id)->with('success', 'amsdna dmasndad smdasndasda');
     }
+
+    public function hapus_pengaduan($id){
+        $pengaduan = Pengaduan::find($id);
+
+        $pengaduan->update([
+            'status_aktif' => 2,
+        ]);
+
+        return redirect()->route('user.hanya-pengaduan-mu')->with('fail', 'amsdna dmasndad smdasndasda');
+    }
 }

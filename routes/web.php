@@ -28,6 +28,8 @@ Route::prefix('administrator')->name('administrator.')->group(function(){
     Route::middleware(['auth:web'])->group(function(){
         Route::get('/dashboard', function(){return view('back.pages.administrator.dashboard');})->name('dashboard');
         Route::get('/semua', [TanggapanController::class, 'semua'])->name('semua');
+        Route::get('/diproses', [TanggapanController::class, 'laporan_yang_sedang_diproses'])->name('diproses');
+        Route::get('/selesai', [TanggapanController::class, 'selesai'])->name('selesai');
         Route::get('/tanggapan/{id}', [TanggapanController::class, 'tanggapan'])->name('tanggapan');
         Route::put('/simpan-tanggapan/{id}', [TanggapanController::class, 'simpan_tanggapan'])->name('simpan-tanggapan');
     });
@@ -47,5 +49,6 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::get('/create', [PengaduanController::class, 'create'])->name('create');
         Route::post('/store', [PengaduanController::class, 'store'])->name('store');
         Route::put('/simpan-perubahan/{id}', [PengaduanController::class, 'simpan_perubahan'])->name('simpan-perubahan');
+        Route::put('/hapus-pengaduan/{id}', [PengaduanController::class, 'hapus_pengaduan'])->name('hapus-pengaduan');
     });
 });

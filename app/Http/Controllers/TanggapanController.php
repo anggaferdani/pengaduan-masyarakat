@@ -13,6 +13,16 @@ class TanggapanController extends Controller
         return view('back.pages.administrator.semua', compact('pengaduan'));
     }
 
+    public function laporan_yang_sedang_diproses(){
+        $pengaduan = Pengaduan::with('users')->paginate();
+        return view('back.pages.administrator.laporan-yang-sedang-diproses', compact('pengaduan'));
+    }
+
+    public function selesai(){
+        $pengaduan = Pengaduan::with('users')->paginate();
+        return view('back.pages.administrator.selesai', compact('pengaduan'));
+    }
+
     public function tanggapan($id){
         $pengaduan = Pengaduan::with('users')->find($id);
         $tanggapan = Tanggapan::with('pengaduans')->get();
@@ -35,6 +45,7 @@ class TanggapanController extends Controller
             'pengaduan_id' => $pengaduan->id,
             'alamat_email_petugas' => auth()->user()->id,
             'tanggapan' => $request['tanggapan'],
+            'status_laporan_pengaduan' => $request['status_laporan_pengaduan'],
         );
 
         Tanggapan::create($tanggapan);

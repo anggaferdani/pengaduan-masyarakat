@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('pengaduan_id')->references('id')->on('pengaduans')->onDelete('cascade');
             $table->foreignId('alamat_email_petugas')->references('id')->on('users')->onDelete('cascade');
             $table->string('tanggapan');
+            $table->string('status_laporan_pengaduan')->default('Pending');
             $table->string('status_aktif')->default(1);
             $table->string('created_by')->nullable();
             $table->string('updated_by')->nullable();

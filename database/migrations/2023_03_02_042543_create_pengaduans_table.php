@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('lampiran')->nullable();
             $table->string('alamat_email_pelapor');
             $table->string('status_publikasi');
-            $table->string('status_laporan_pengaduan')->default(2);
+            $table->string('status_laporan_pengaduan')->default('Pending');
             $table->string('status_aktif')->default(1);
             $table->string('created_by')->nullable();
             $table->string('updated_by')->nullable();

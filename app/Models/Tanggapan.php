@@ -21,6 +21,7 @@ class Tanggapan extends Model
         'pengaduan_id',
         'alamat_email_petugas',
         'tanggapan',
+        'status_laporan_pengaduan',
         'status_aktif',
         'created_by',
         'updated_by',

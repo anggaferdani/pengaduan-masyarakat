@@ -3,7 +3,6 @@
 <div class="row g-2 align-items-center">
   <div class="col">
     <h2 class="page-title">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-news" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"></path><path d="M8 8l4 0"></path><path d="M8 12l4 0"></path><path d="M8 16l4 0"></path></svg>
       Pengaduan
     </h2>
   </div>
@@ -53,38 +52,48 @@
         </div>
         <p>dibuat oleh {{ $pengaduan->alamat_email_pelapor }}</p>
       </div>
+      @if($pengaduan->created_by == auth()->user()->id)
       <div class="card-footer text-end">
         <button type="submit" class="btn btn-primary">Edit</button>
       </div>
+      @endif
     </form>
   </div>
   <div class="col-lg-4">
-    <div class="card">
-      <div class="card-body">
-        <h3 class="card-title">Tanggapan</h3>
-        <ul class="steps steps-vertical">
-          <li class="step-item">
-            <div class="h4 m-0">Pending</div>
-            <div class="text-muted">Laporan pengaduanmu berhasil ditambahkan. tunggu untuk petugas memberi tanggapan</div>
-          </li>
-          @if($pengaduan->status_laporan_pengaduan == 2)
-          <li class="step-item">
-            <div class="h4 m-0">Sedang Melakukan Peninjauan</div>
-            <div class="text-muted">sdsadsadsadsadasdasdsa</div>
-          </li>
-          @endif
-          @if($pengaduan->status_laporan_pengaduan == 3)
-          <li class="step-item">
-            <div class="h4 m-0">Sedang Melakukan Peninjauan</div>
-            <div class="text-muted">sdsadsadsadsadasdasdsa</div>
-          </li>
-          <li class="step-item">
-            <div class="h4 m-0">Selesai</div>
-            <div class="text-muted">Laporan pengaduanmu berhasil diselesaikan</div>
-          </li>
-          @endif
-        </ul>
-      </div>
+    <div class="row row-cards">
+      <col-12>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Tanggapan</h3>
+            <ul class="steps steps-vertical">
+              <li class="step-item">
+                <div class="h4 m-0">Pending</div>
+                <div class="text-muted">Laporan pengaduanmu berhasil ditambahkan. tunggu untuk petugas memberi tanggapan</div>
+              </li>
+              @foreach($pengaduan->tanggapans as $tanggapans)
+              <li class="step-item">
+                <div class="h4 m-0">{{ $tanggapans->status_laporan_pengaduan }}</div>
+                <div class="text-muted">{{ $tanggapans->tanggapan }}</div>
+              </li>
+              @endforeach
+            </ul>
+          </div>
+        </div>
+      </col-12>
+      @if($pengaduan->created_by == auth()->user()->id)
+        <col-12>
+          <div class="card">
+            <div class="card-body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis nisi minus repudiandae vel debitis ipsam atque quam eligendi officia, provident voluptate deleniti nostrum similique, quibusdam veritatis voluptatum quidem. Voluptatum?</p>
+              <form action="{{ route('user.hapus-pengaduan', $pengaduan->id) }}" method="POST">
+                @csrf
+                @method('PUT')
+                <button type="submit" class="btn btn-danger w-100">Hapus</button>
+              </form>
+            </div>
+          </div>
+        </col-12>
+      @endif
     </div>
   </div>
 </div>
