@@ -30,6 +30,7 @@ class User extends Authenticatable
         'email',
         'password',
         'level',
+        'status_akun_yang_digunakan',
         'status_aktif',
         'created_by',
         'updated_by',

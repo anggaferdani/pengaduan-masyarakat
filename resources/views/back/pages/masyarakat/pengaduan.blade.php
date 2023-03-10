@@ -35,16 +35,25 @@
       <div class="card-body">
         <div class="mb-3">
           <label class="form-label required">Judul</label>
+          @if($pengaduan->created_by == auth()->user()->id)
           <input type="text" name="judul" value="{{ $pengaduan->judul }}" class="form-control" placeholder="">
+          @endif
+          <input readonly type="text" name="judul" @if($pengaduan->created_by == auth()->user()->id){{ 'hidden' }}@endif value="{{ $pengaduan->judul }}" class="form-control" placeholder="">
         </div>
         <div class="mb-3">
           <label class="form-label required">Keterangan</label>
+          @if($pengaduan->created_by == auth()->user()->id)
           <textarea name="keterangan" required class="form-control" rows="4" placeholder="">{{ $pengaduan->keterangan }}</textarea>
+          @endif
+          <textarea readonly name="keterangan" @if($pengaduan->created_by == auth()->user()->id){{ 'hidden' }}@endif class="form-control" rows="4" placeholder="">{{ $pengaduan->keterangan }}</textarea>
         </div>
         <p class="card-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis nisi minus repudiandae vel debitis ipsam atque quam eligendi officia, provident voluptate deleniti nostrum similique, quibusdam veritatis voluptatum quidem. Voluptatum?</p>
         <div class="mb-3">
           <label class="form-label required">Tanggal Pengaduan</label>
+          @if($pengaduan->created_by == auth()->user()->id)
           <input type="date" name="tanggal_pengaduan" value="{{ $pengaduan->tanggal_pengaduan }}" class="form-control" placeholder="">
+          @endif
+          <input readonly type="date" name="tanggal_pengaduan" @if($pengaduan->created_by == auth()->user()->id){{ 'hidden' }}@endif value="{{ $pengaduan->tanggal_pengaduan }}" class="form-control" placeholder="">
         </div>
         <div class="mb-3">
           <label class="form-label">Lampiran</label>

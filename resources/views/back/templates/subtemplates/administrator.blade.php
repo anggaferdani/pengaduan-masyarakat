@@ -134,7 +134,7 @@
         <div class="container-xl">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="./" >
+              <a class="nav-link" href="{{ route('administrator.semua') }}" >
                 <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-news" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"></path><path d="M8 8l4 0"></path><path d="M8 12l4 0"></path><path d="M8 16l4 0"></path></svg>
                 </span>
@@ -144,62 +144,20 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./form-elements.html" >
-                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/checkbox -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11l3 3l8 -8" /><path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" /></svg>
+              <a class="nav-link" href="{{ route('administrator.petugas') }}" >
+                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                    <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
+                 </svg>
                 </span>
                 <span class="nav-link-title">
-                  Form elements
+                  Petugas
                 </span>
               </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" aria-expanded="false" >
-                <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/star -->
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" /></svg>
-                </span>
-                <span class="nav-link-title">
-                  Extra
-                </span>
-              </a>
-              <div class="dropdown-menu">
-                <div class="dropdown-menu-columns">
-                  <div class="dropdown-menu-column">
-                    <a class="dropdown-item" href="./activity.html">
-                      Activity
-                    </a>
-                    <a class="dropdown-item" href="./gallery.html">
-                      Gallery
-                    </a>
-                    <a class="dropdown-item" href="./invoice.html">
-                      Invoice
-                    </a>
-                    <a class="dropdown-item" href="./search-results.html">
-                      Search results
-                    </a>
-                    <a class="dropdown-item" href="./pricing.html">
-                      Pricing cards
-                    </a>
-                    <a class="dropdown-item" href="./pricing-table.html">
-                      Pricing table
-                    </a>
-                    <a class="dropdown-item" href="./faq.html">
-                      FAQ
-                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                    </a>
-                    <a class="dropdown-item" href="./users.html">
-                      Users
-                    </a>
-                    <a class="dropdown-item" href="./license.html">
-                      License
-                    </a>
-                    <a class="dropdown-item" href="./logs.html">
-                      Logs
-                      <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
             </li>
           </ul>
           <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">

@@ -63,5 +63,9 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'admin' => \App\Http\Middleware\AdminMiddleware::class,
+        'petugas' => \App\Http\Middleware\PetugasMiddleware::class,
+        'user' => \App\Http\Middleware\MasyarakatMiddleware::class,
+        'disable_back_button' => \App\Http\Middleware\DisableBackButton::class,
     ];
 }

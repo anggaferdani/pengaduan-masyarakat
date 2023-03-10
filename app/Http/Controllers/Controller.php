@@ -41,14 +41,17 @@ class Controller extends BaseController
                 }elseif(auth()->user()->level == 3){
                     return redirect()->route('user.create');
                 }
+            }elseif(auth()->user()->status_akun_yang_digunakan == 2){
+                Auth::guard('web')->logout();
+                return redirect()->route('login')->with('fail', 'Akun telah dihapus. hubungi pihak terkait');
             }elseif(auth()->user()->status_aktif == 2){
                 Auth::guard('web')->logout();
-                return redirect()->route('login')->with('fail', 'asndasdmas dasd');
+                return redirect()->route('login')->with('fail', 'Akun telah ditangguhkan. hubungi pihak terkait');
             }else{
-                return redirect()->route('login')->with('fail', 'asndasdmas dasd');
+                return redirect()->route('login')->with('fail', 'Akun telah ditangguhkan.');
             }
         }else{
-            return redirect()->route('login')->with('fail', 'asnmds. dsad dsadsadsadsadasdasdsadasda');
+            return redirect()->route('login')->with('fail', 'Email/Password yang digunakan untuk login salah. coba lagi');
         }
     }
 
@@ -81,7 +84,7 @@ class Controller extends BaseController
 
         User::create($user);
 
-        return redirect()->route('login')->with('success', 'sadmsandmsmad dsadmnsad smd asdnsadad');
+        return redirect()->route('login')->with('success', 'Pembuatan akun berhasil');
     }
 
     public function logout(){
