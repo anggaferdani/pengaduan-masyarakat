@@ -28,10 +28,10 @@
     <a class="nav-link" aria-current="page" href="{{ route('administrator.semua') }}">Semua</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" aria-current="page" href="{{ route('administrator.baru') }}">Baru</a>
+    <a class="nav-link active" aria-current="page" href="{{ route('administrator.baru') }}">Baru</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="{{ route('administrator.diproses') }}">Laporan yang sedang diproses</a>
+    <a class="nav-link" href="{{ route('administrator.diproses') }}">Laporan yang sedang diproses</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="{{ route('administrator.selesai') }}">Selesai</a>
@@ -39,7 +39,7 @@
 </ul>
 <div class="row row-cards">
   @foreach ($pengaduan as $pengaduans)
-    @if($pengaduans->status_laporan_pengaduan == 'Diproses')
+    @if($pengaduans->status_laporan_pengaduan == 'Pending')
       @if($pengaduans->status_aktif == 1)
       <div class="col-md-6 col-lg-3">
         <a href="{{ route('administrator.tanggapan', $pengaduans->id) }}">

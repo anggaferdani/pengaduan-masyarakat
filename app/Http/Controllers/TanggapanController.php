@@ -2,15 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Models\Pengaduan;
 use App\Models\Tanggapan;
 use Illuminate\Http\Request;
 
 class TanggapanController extends Controller
 {
+    public function cetak_laporan_pengaduan(){
+        $pengaduan = Pengaduan::all();
+        $pdf = PDF::loadView('back.pages.pdf.cetak-laporan-pengaduan', compact('pengaduan'));
+        return $pdf->download('laporan_pengaduan_'.date('m/d/Y').'.pdf');
+        // return $pdf->stream();
+        // return view('back.pages.pdf.cetak-laporan-pengaduan', compact('tanggapan'));
+    }
+    
     public function semua(){
         $pengaduan = Pengaduan::with('users')->paginate();
         return view('back.pages.administrator.semua', compact('pengaduan'));
+    }
+
+    public function baru(){
+        $pengaduan = Pengaduan::with('users')->paginate();
+        return view('back.pages.administrator.baru', compact('pengaduan'));
     }
 
     public function laporan_yang_sedang_diproses(){

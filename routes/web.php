@@ -31,11 +31,14 @@ Route::prefix('administrator')->name('administrator.')->group(function(){
     Route::middleware(['auth:web', 'admin', 'disable_back_button'])->group(function(){
         Route::get('/dashboard', function(){return view('back.pages.administrator.dashboard');})->name('dashboard');
         Route::get('/semua', [TanggapanController::class, 'semua'])->name('semua');
+        Route::get('/baru', [TanggapanController::class, 'baru'])->name('baru');
         Route::get('/diproses', [TanggapanController::class, 'laporan_yang_sedang_diproses'])->name('diproses');
         Route::get('/selesai', [TanggapanController::class, 'selesai'])->name('selesai');
         Route::get('/tanggapan/{id}', [TanggapanController::class, 'tanggapan'])->name('tanggapan');
         Route::put('/simpan-tanggapan/{id}', [TanggapanController::class, 'simpan_tanggapan'])->name('simpan-tanggapan');
 
+        Route::get('/cetak-laporan-pengaduan', [TanggapanController::class, 'cetak_laporan_pengaduan'])->name('cetak-laporan-pengaduan');
+        
         Route::get('/petugas', [PetugasController::class, 'petugas'])->name('petugas');
         Route::post('/postpetugas', [PetugasController::class, 'postpetugas'])->name('postpetugas');
         Route::get('/petugas/{id}', [PetugasController::class, 'ubah'])->name('ubah');
