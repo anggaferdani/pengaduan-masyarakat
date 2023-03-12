@@ -17,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [Controller::class, 'index'])->name('index');
+Route::get('/tampilkan-semua-laporan', [Controller::class, 'tampilkan_semua_laporan'])->name('tampilkan-semua-laporan');
+
 Route::middleware(['web'])->group(function(){
-    Route::get('/', [Controller::class, 'login'])->name('login');
+    Route::get('/login', [Controller::class, 'login'])->name('login');
     Route::post('/postlogin', [Controller::class, 'postlogin'])->name('postlogin');
     Route::middleware(['guest'])->group(function(){
     });
@@ -42,6 +45,8 @@ Route::prefix('administrator')->name('administrator.')->group(function(){
         Route::get('/petugas', [PetugasController::class, 'petugas'])->name('petugas');
         Route::post('/postpetugas', [PetugasController::class, 'postpetugas'])->name('postpetugas');
         Route::get('/petugas/{id}', [PetugasController::class, 'ubah'])->name('ubah');
+        Route::put('/simpan-perubahan-petugas/{id}', [PetugasController::class, 'simpan_perubahan_petugas'])->name('simpan-perubahan-petugas');
+        Route::put('/hapus-petugas/{id}', [PetugasController::class, 'hapus_petugas'])->name('hapus-petugas');
     });
 });
 

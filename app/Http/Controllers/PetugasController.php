@@ -37,4 +37,34 @@ class PetugasController extends Controller
         $petugas = User::find($id);
         return view('back.pages.petugas.ubah', compact('petugas'));
     }
+
+    public function simpan_perubahan_petugas(Request $request, $id){
+        $request->validate([
+            'nama_panjang' => 'required',
+            'telepon' => 'required',
+            'email' => 'required|email',
+            'status_akun_yang_digunakan' => 'required',
+        ]);
+
+        $petugas = User::find($id);
+
+        $petugas->update([
+            'nama_panjang' => $request->nama_panjang,
+            'telepon' => $request->telepon,
+            'email' => $request->email,
+            'status_akun_yang_digunakan' => $request->status_akun_yang_digunakan,
+        ]);
+
+        return redirect()->route('administrator.ubah', $id)->with('success', 'Data berhasil diperbaharui');
+    }
+
+    public function hapus_petugas($id){
+        $petugas = User::find($id);
+
+        $petugas->update([
+            'status_aktif' => 2,
+        ]);
+
+        return redirect()->route('administrator.petugas')->with('fail', 'amsdna dmasndad smdasndasda');
+    }
 }

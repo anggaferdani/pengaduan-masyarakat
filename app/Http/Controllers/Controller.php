@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Pengaduan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Routing\Controller as BaseController;
@@ -12,6 +13,15 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+
+    public function index(){
+        return view('back.pages.masyarakat.tampilan-belum-masuk.index');
+    }
+
+    public function tampilkan_semua_laporan(){
+        $pengaduan = Pengaduan::with('users')->paginate();
+        return view('back.pages.masyarakat.tampilan-belum-masuk.tampilkan_semua_laporan', compact('pengaduan'));
+    }
 
     public function login(){
         return view('back.pages.authentications.login');

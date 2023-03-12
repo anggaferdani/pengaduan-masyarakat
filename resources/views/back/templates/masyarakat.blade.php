@@ -30,15 +30,11 @@
       }
     </style>
   </head>
-  <body>
+  <body style="background-color: white;">
     <script src="{{ asset('back/dist/js/demo-theme.min.js?1674944402') }}"></script>
     <div class="page">
       <!-- Navbar -->
-      @if(auth()->user()->level == 1 or auth()->user()->level == 2)
-        @include('back.templates.subtemplates.administrator')
-      @elseif(auth()->user()->level == 3)
-        @include('back.templates.subtemplates.user')
-      @endif
+      @include('back.templates.subtemplates.masyarakat')
       <div class="page-wrapper">
         <div class="page-header d-print-none">
           <div class="container-xl">
@@ -51,7 +47,6 @@
             @yield('content')
           </div>
         </div>
-        @include('back.templates.subtemplates.footer')
       </div>
     </div>
     <!-- Libs JS -->

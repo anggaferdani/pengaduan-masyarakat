@@ -3,8 +3,8 @@
 @section('content')
 <div class="page page-center mt-5">
   <div class="container container-narrow py-4 mt-5">
-    <div class="text-center mb-4 mt-5">
-      <a href="." class="navbar-brand navbar-brand-autodark"><img src="{{ asset('back/static/logo.svg') }}" height="36" alt=""></a>
+    <div class="text-center mb-2" style="margin-top: 280px;">
+      <a href="{{ route('index') }}" class="navbar-brand navbar-brand-autodark"><h1>pengaduan.com</h1></a>
     </div>
     <div class="card card-md">
       <div class="card-body">

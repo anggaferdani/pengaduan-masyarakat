@@ -3,8 +3,8 @@
 @section('content')
 <div class="page page-center">
   <div class="container container-tight py-4">
-    <div class="text-center mb-4">
-      <h1>pengaduan.com</h1>
+    <div class="text-center mb-2">
+      <a href="{{ route('index') }}" class="navbar-brand navbar-brand-autodark"><h1>pengaduan.com</h1></a>
     </div>
     <div class="card card-md">
       <div class="card-body">
@@ -41,7 +41,7 @@
             </label>
           </div>
           <div class="form-footer">
-            <button type="submit" class="btn btn-primary w-100">Masuk</button>
+            <button type="submit" class="btn btn-dark w-100">Masuk</button>
           </div>
         </form>
       </div>
