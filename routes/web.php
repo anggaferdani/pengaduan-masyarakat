@@ -41,6 +41,7 @@ Route::prefix('administrator')->name('administrator.')->group(function(){
         Route::put('/simpan-tanggapan/{id}', [TanggapanController::class, 'simpan_tanggapan'])->name('simpan-tanggapan');
 
         Route::get('/cetak-laporan-pengaduan', [TanggapanController::class, 'cetak_laporan_pengaduan'])->name('cetak-laporan-pengaduan');
+        Route::get('/cetak-banyak-petugas', [PetugasController::class, 'cetak_banyak_petugas'])->name('cetak-banyak-petugas');
         
         Route::get('/petugas', [PetugasController::class, 'petugas'])->name('petugas');
         Route::post('/postpetugas', [PetugasController::class, 'postpetugas'])->name('postpetugas');
@@ -53,6 +54,7 @@ Route::prefix('administrator')->name('administrator.')->group(function(){
 Route::prefix('petugas')->name('petugas.')->group(function(){
     Route::middleware(['auth:web', 'petugas', 'disable_back_button'])->group(function(){
         Route::get('/dashboard', function(){return view('back.pages.petugas.dashboard');})->name('dashboard');
+        Route::get('/cetak-laporan-pengaduan', [TanggapanController::class, 'cetak_laporan_pengaduan'])->name('cetak-laporan-pengaduan');
     });
 });
 

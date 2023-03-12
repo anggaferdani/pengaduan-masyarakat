@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Models\User;
 use Illuminate\Http\Request;
 
 class PetugasController extends Controller
 {
+    public function cetak_banyak_petugas(){
+        $petugas_dari_controller = User::all();
+        $pdf = PDF::loadView('back.pages.pdf.cetak-banyak-petugas', compact('petugas_dari_controller'));
+        return $pdf->download('petugas'.date('m/d/Y').'.pdf');
+        // return $pdf->stream();
+        // return view('back.pages.pdf.cetak-laporan-pengaduan', compact('tanggapan'));
+    }
+
     public function petugas(){
         $petugas_dari_controller = User::all();
         return view('back.pages.petugas.index', compact('petugas_dari_controller'));
