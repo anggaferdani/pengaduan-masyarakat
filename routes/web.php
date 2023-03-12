@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'index'])->name('index');
 Route::get('/tampilkan-semua-laporan', [Controller::class, 'tampilkan_semua_laporan'])->name('tampilkan-semua-laporan');
+Route::get('/laporan-pengaduan-masyarakat/{id}', [Controller::class, 'laporan_pengaduan_masyarakat'])->name('laporan-pengaduan-masyarakat');
 
 Route::middleware(['web'])->group(function(){
     Route::get('/login', [Controller::class, 'login'])->name('login');
@@ -54,6 +55,13 @@ Route::prefix('administrator')->name('administrator.')->group(function(){
 Route::prefix('petugas')->name('petugas.')->group(function(){
     Route::middleware(['auth:web', 'petugas', 'disable_back_button'])->group(function(){
         Route::get('/dashboard', function(){return view('back.pages.petugas.dashboard');})->name('dashboard');
+        Route::get('/semua', [TanggapanController::class, 'semua'])->name('semua');
+        Route::get('/baru', [TanggapanController::class, 'baru'])->name('baru');
+        Route::get('/diproses', [TanggapanController::class, 'laporan_yang_sedang_diproses'])->name('diproses');
+        Route::get('/selesai', [TanggapanController::class, 'selesai'])->name('selesai');
+        Route::get('/tanggapan/{id}', [TanggapanController::class, 'tanggapan'])->name('tanggapan');
+        Route::put('/simpan-tanggapan/{id}', [TanggapanController::class, 'simpan_tanggapan'])->name('simpan-tanggapan');
+
         Route::get('/cetak-laporan-pengaduan', [TanggapanController::class, 'cetak_laporan_pengaduan'])->name('cetak-laporan-pengaduan');
     });
 });

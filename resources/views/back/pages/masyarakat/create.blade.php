@@ -10,8 +10,6 @@
   <!-- Page title actions -->
   <div class="col-auto ms-auto d-print-none">
     <a href="#" onclick="history.go(-1)" class="btn btn-primary">
-      <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M5 12l6 6"></path><path d="M5 12l6 -6"></path></svg>
       Kembali
     </a>
   </div>
@@ -51,7 +49,6 @@
           <label class="form-label">Lampiran</label>
           <input type="file" name="lampiran" class="form-control" placeholder="Masukan lampiran">
         </div>
-        <p class="card-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis nisi minus repudiandae vel debitis ipsam atque quam eligendi officia, provident voluptate deleniti nostrum similique, quibusdam veritatis voluptatum quidem. Voluptatum?</p>
         <label class="form-label required">Status Publikasi</label>
         <div class="form-selectgroup-boxes row mb-3">
           <div class="col-lg-6">
@@ -93,8 +90,6 @@
     <div class="card">
       <div class="card-body">
         <h3 class="card-title">Ketentuan penulisan laporan pengaduan</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cum sunt enim totam voluptatum quisquam, sint distinctio, dolore hic mollitia aut itaque iusto. Non, modi? Hic sit tenetur necessitatibus odit.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cum sunt enim totam voluptatum quisquam, sint distinctio, dolore hic mollitia aut itaque iusto. Non, modi? Hic sit tenetur necessitatibus odit.</p>
       </div>
     </div>
   </div>

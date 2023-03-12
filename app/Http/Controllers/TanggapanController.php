@@ -64,6 +64,10 @@ class TanggapanController extends Controller
 
         Tanggapan::create($tanggapan);
 
-        return redirect()->route('administrator.tanggapan', $id)->with('success', 'amsdna dmasndad smdasndasda');
+        if(auth()->user()->level == 1){
+            return redirect()->route('administrator.tanggapan', $id)->with('success', 'amsdna dmasndad smdasndasda');
+        }elseif(auth()->user()->level == 2){
+            return redirect()->route('petugas.tanggapan', $id)->with('success', 'amsdna dmasndad smdasndasda');
+        }
     }
 }

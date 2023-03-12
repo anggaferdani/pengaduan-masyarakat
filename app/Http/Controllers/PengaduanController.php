@@ -83,6 +83,7 @@ class PengaduanController extends Controller
             'status_aktif' => 2,
         ]);
 
-        return redirect()->route('user.hanya-pengaduan-mu')->with('fail', 'amsdna dmasndad smdasndasda');
+        return redirect()->route('user.hanya-pengaduan-mu')
+                        ->with('fail', 'amsdna dmasndad smdasndasda');
     }
 }

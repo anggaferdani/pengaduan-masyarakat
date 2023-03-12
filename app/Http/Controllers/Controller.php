@@ -23,6 +23,11 @@ class Controller extends BaseController
         return view('back.pages.masyarakat.tampilan-belum-masuk.tampilkan_semua_laporan', compact('pengaduan'));
     }
 
+    public function laporan_pengaduan_masyarakat($id){
+        $pengaduan = Pengaduan::with('users')->find($id);
+        return view('back.pages.masyarakat.tampilan-belum-masuk.pengaduan', compact('pengaduan'));
+    }
+
     public function login(){
         return view('back.pages.authentications.login');
     }
@@ -44,19 +49,22 @@ class Controller extends BaseController
 
         if(Auth::guard('web')->attempt($creds)){
             if(auth()->user()->status_aktif == 1){
-                if(auth()->user()->level == 1){
-                    return redirect()->route('administrator.semua');
-                }elseif(auth()->user()->level == 2){
-                    return redirect()->route('petugas.dashboard');
-                }elseif(auth()->user()->level == 3){
-                    return redirect()->route('user.create');
+                if(auth()->user()->status_akun_yang_digunakan == 1){
+                    if(auth()->user()->level == 1){
+                        return redirect()->route('administrator.semua');
+                    }elseif(auth()->user()->level == 2){
+                        return redirect()->route('petugas.semua');
+                            return redirect()->route('petugas.semua');
+                    }elseif(auth()->user()->level == 3){
+                        return redirect()->route('user.create');
+                    }
+                }elseif(auth()->user()->status_akun_yang_digunakan == 2){
+                    Auth::guard('web')->logout();
+                    return redirect()->route('login')->with('fail', 'Akun telah ditangguhkan. hubungi pihak terkait');
                 }
-            }elseif(auth()->user()->status_akun_yang_digunakan == 2){
-                Auth::guard('web')->logout();
-                return redirect()->route('login')->with('fail', 'Akun telah dihapus. hubungi pihak terkait');
             }elseif(auth()->user()->status_aktif == 2){
                 Auth::guard('web')->logout();
-                return redirect()->route('login')->with('fail', 'Akun telah ditangguhkan. hubungi pihak terkait');
+                return redirect()->route('login')->with('fail', 'Akun telah dihapus. hubungi pihak terkait');
             }else{
                 return redirect()->route('login')->with('fail', 'Akun telah ditangguhkan.');
             }

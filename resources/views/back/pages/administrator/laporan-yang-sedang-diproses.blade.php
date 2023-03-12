@@ -6,24 +6,25 @@
       Pengaduan
     </h2>
   </div>
-  <!-- Page title actions -->
   <div class="col-auto ms-auto d-print-none">
-    <a href="#" onclick="history.go(-1)" class="btn btn-primary">
-      <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M5 12l6 6"></path><path d="M5 12l6 -6"></path></svg>
-      Kembali
-    </a>
-  </div>
-  <div class="col-auto ms-auto d-print-none">
+    @if(auth()->user()->level == 1)
     <a href="{{ route('administrator.cetak-laporan-pengaduan') }}" class="btn btn-primary">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-news" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"></path><path d="M8 8l4 0"></path><path d="M8 12l4 0"></path><path d="M8 16l4 0"></path></svg>
       Cetak laporan
     </a>
+    @endif
+    @if(auth()->user()->level == 2)
+    <a href="{{ route('petugas.cetak-laporan-pengaduan') }}" class="btn btn-primary">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-news" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"></path><path d="M8 8l4 0"></path><path d="M8 12l4 0"></path><path d="M8 16l4 0"></path></svg>
+      Cetak laporan
+    </a>
+    @endif
   </div>
 </div>
 @endsection
 @section('content')
 <ul class="nav nav-bordered mb-4">
+  @if(auth()->user()->level == 1)
   <li class="nav-item">
     <a class="nav-link" aria-current="page" href="{{ route('administrator.semua') }}">Semua</a>
   </li>
@@ -36,13 +37,33 @@
   <li class="nav-item">
     <a class="nav-link" href="{{ route('administrator.selesai') }}">Selesai</a>
   </li>
+  @endif
+  @if(auth()->user()->level == 2)
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" href="{{ route('petugas.baru') }}">Semua</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" href="{{ route('petugas.baru') }}">Baru</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="{{ route('petugas.diproses') }}">Laporan yang sedang diproses</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('petugas.selesai') }}">Selesai</a>
+  </li>
+  @endif
 </ul>
 <div class="row row-cards">
   @foreach ($pengaduan as $pengaduans)
     @if($pengaduans->status_laporan_pengaduan == 'Diproses')
       @if($pengaduans->status_aktif == 1)
       <div class="col-md-6 col-lg-3">
-        <a href="{{ route('administrator.tanggapan', $pengaduans->id) }}">
+        @if(auth()->user()->level == 1)
+          <a href="{{ route('administrator.tanggapan', $pengaduans->id) }}">
+        @endif
+        @if(auth()->user()->level == 2)
+          <a href="{{ route('petugas.tanggapan', $pengaduans->id) }}">
+        @endif
           <div class="card bg-primary h-100 text-primary-fg">
             <div class="card-stamp">
               <div class="card-stamp-icon bg-white text-primary">

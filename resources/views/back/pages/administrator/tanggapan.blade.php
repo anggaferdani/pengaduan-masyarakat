@@ -76,7 +76,12 @@
         </div>
       </div>
       <div class="col-12">
+        @if(auth()->user()->level == 1)
         <form class="card" action="{{ route('administrator.simpan-tanggapan', $pengaduan->id) }}" method="POST">
+        @endif
+        @if(auth()->user()->level == 2)
+        <form class="card" action="{{ route('petugas.simpan-tanggapan', $pengaduan->id) }}" method="POST">
+        @endif
           @csrf
           @method('PUT')
           <div class="card-header">

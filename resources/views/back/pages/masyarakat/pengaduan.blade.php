@@ -9,8 +9,6 @@
   <!-- Page title actions -->
   <div class="col-auto ms-auto d-print-none">
     <a href="#" onclick="history.go(-1)" class="btn btn-primary">
-      <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M5 12l6 6"></path><path d="M5 12l6 -6"></path></svg>
       Kembali
     </a>
   </div>
@@ -47,7 +45,6 @@
           @endif
           <textarea readonly name="keterangan" @if($pengaduan->created_by == auth()->user()->id){{ 'hidden' }}@endif class="form-control" rows="4" placeholder="">{{ $pengaduan->keterangan }}</textarea>
         </div>
-        <p class="card-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis nisi minus repudiandae vel debitis ipsam atque quam eligendi officia, provident voluptate deleniti nostrum similique, quibusdam veritatis voluptatum quidem. Voluptatum?</p>
         <div class="mb-3">
           <label class="form-label required">Tanggal Pengaduan</label>
           @if($pengaduan->created_by == auth()->user()->id)
@@ -93,7 +90,6 @@
         <col-12>
           <div class="card">
             <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis perferendis nisi minus repudiandae vel debitis ipsam atque quam eligendi officia, provident voluptate deleniti nostrum similique, quibusdam veritatis voluptatum quidem. Voluptatum?</p>
               <form action="{{ route('user.hapus-pengaduan', $pengaduan->id) }}" method="POST">
                 @csrf
                 @method('PUT')
