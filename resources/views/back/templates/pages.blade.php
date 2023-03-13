@@ -30,7 +30,7 @@
       }
     </style>
   </head>
-  <body>
+  <body style="background-color: white;">
     <script src="{{ asset('back/dist/js/demo-theme.min.js?1674944402') }}"></script>
     <div class="page">
       <!-- Navbar -->

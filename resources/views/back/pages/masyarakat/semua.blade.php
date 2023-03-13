@@ -8,13 +8,7 @@
   </div>
   <!-- Page title actions -->
   <div class="col-auto ms-auto d-print-none">
-    <a href="{{ route('user.create') }}" class="btn btn-primary">
-      <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-at" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
-        <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"></path>
-     </svg>
+    <a href="{{ route('user.create') }}" class="btn" style="border: 2px solid black;">
       Buat Laporan Pengaduan
     </a>
   </div>
@@ -35,7 +29,7 @@
       @if($pengaduans->status_publikasi == 2)
       <div class="col-md-6 col-lg-3">
         <a href="{{ route('user.pengaduan', $pengaduans->id) }}">
-          <div class="card bg-primary h-100 text-primary-fg">
+          <div class="card bg-primary h-100 text-primary-fg" style="border: 2px solid black; border-radius: 15px;">
             <div class="card-stamp">
               <div class="card-stamp-icon bg-white text-primary">
                 <!-- Download SVG icon from http://tabler-icons.io/i/star -->

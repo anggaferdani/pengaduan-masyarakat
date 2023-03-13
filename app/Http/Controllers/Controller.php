@@ -37,6 +37,7 @@ class Controller extends BaseController
     public function postlogin(Request $request){
         $input = $request->all();
 
+
         $this->validate($request, [
             'email' => 'required|email|exists:users,email',
             'password' => 'required|min:8',
